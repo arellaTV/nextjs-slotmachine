@@ -17,7 +17,7 @@ export default () => (
             <h2>Third Letter</h2>
           </a>
           <a className="card">
-            <h2>Spin</h2>
+            <button>Spin</button>
           </a>
         </div>
     </div>
