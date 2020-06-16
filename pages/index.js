@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Head from '../components/head';
-import symbolDictionary from './symbolDictionary'
+import symbolDictionary from './symbolDictionary.json'
 
 export default () => {
   const [spinResult, setSpinResult] = useState("");
