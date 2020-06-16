@@ -1,11 +1,29 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import Head from '../components/head';
 
 export default () => {
   const [spinResult, setSpinResult] = useState("");
+  const [threeInARow, setThreeInARow] = useState(false);
 
   function spin() {
     console.log('spinning');
+    axios.get('/api/spin')
+      .then(function (response) {
+        // handle success
+        setSpinResult(response?.data?.results);
+        setThreeInARow(response?.data?.threeInARow);
+        console.log(response);
+      })
+      .catch(function (error) {
+        // handle error
+        setSpinResult("");
+        setThreeInARow(false);
+        console.log(error);
+      })
+      .finally(function () {
+        // always executed
+      });
   }
 
   return (
@@ -16,13 +34,13 @@ export default () => {
         <p className="description">To get started, click the "spin" button.</p>
         <div className="row">
             <a className="card">
-              <h2>First Letter</h2>
+              <h2>{"First Letter"}</h2>
             </a>
             <a className="card">
-              <h2>Second Letter</h2>
+              <h2>{"Second Letter"}</h2>
             </a>
             <a className="card">
-              <h2>Third Letter</h2>
+              <h2>{"Third Letter"}</h2>
             </a>
             <a className="card">
               <button onClick={spin}>Spin</button>
