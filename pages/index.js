@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Head from '../components/head';
+import symbolDictionary from './symbolDictionary'
 
 export default () => {
   const [spinResult, setSpinResult] = useState("");
@@ -26,6 +27,11 @@ export default () => {
       });
   }
 
+  function getSpriteOffset(letter) {
+    console.log(symbolDictionary[letter]);
+    return symbolDictionary[letter].offset;
+  }
+
   return (
     <div>
       <Head title="Home" />
@@ -33,18 +39,13 @@ export default () => {
         <h1 className="title">Welcome to the Next.js Classic Slot Machine</h1>
         <p className="description">To get started, click the "spin" button.</p>
         <div className="row">
-          <div className="card">
-            <h2>{spinResult[0] || "First Letter"}</h2>
+          <div className="card" style={spinResult[0] && { backgroundPositionY: getSpriteOffset(spinResult[0]) }}>
           </div>
-          <div className="card">
-            <h2>{spinResult[1] || "Second Letter"}</h2>
+          <div className="card" style={spinResult[1] && { backgroundPositionY: getSpriteOffset(spinResult[1]) }}>
           </div>
-          <div className="card">
-            <h2>{spinResult[2] || "Third Letter"}</h2>
+          <div className="card" style={spinResult[2] && { backgroundPositionY: getSpriteOffset(spinResult[2]) }}>
           </div>
-          <div className="card">
-            <button onClick={spin}>Spin</button>
-          </div>
+          <button onClick={spin}>Spin</button>
         </div>
         {spinResult &&
           <div className="row">
@@ -77,11 +78,13 @@ export default () => {
           justify-content: space-around;
         }
         .card {
-          padding: 18px 18px 24px;
+          background-image: url(/symbol_strip.svg);
+          background-repeat: repeat-y;
+          background-position-x: center;
+          background-position-y: 0px;
+          background-size: 50%;
+          height: 330px;
           width: 220px;
-          text-align: left;
-          text-decoration: none;
-          color: #434343;
           border: 1px solid #9B9B9B;
         }
         .card:hover {
