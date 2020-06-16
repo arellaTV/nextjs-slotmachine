@@ -6,9 +6,10 @@ import symbolDictionary from './symbolDictionary'
 export default () => {
   const [spinResult, setSpinResult] = useState("");
   const [threeInARow, setThreeInARow] = useState(false);
+  const [spinButtonDisabled, setSpinButtonDisabled] = useState(false);
 
   function spin() {
-    console.log('spinning');
+    setSpinButtonDisabled(true);
     axios.get('/api/spin')
       .then(function (response) {
         // handle success
@@ -24,6 +25,7 @@ export default () => {
       })
       .finally(function () {
         // always executed
+        setTimeout(() => setSpinButtonDisabled(false), 3000);
       });
   }
 
@@ -45,7 +47,7 @@ export default () => {
           </div>
           <div className="card" style={spinResult[2] && { backgroundPositionY: getSpriteOffset(spinResult[2]) }}>
           </div>
-          <button onClick={spin}>Spin</button>
+          <button onClick={spin} disabled={spinButtonDisabled}>Spin</button>
         </div>
         {spinResult &&
           <div className="row">
