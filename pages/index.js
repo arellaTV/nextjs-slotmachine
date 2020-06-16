@@ -38,7 +38,11 @@ export default () => {
       <Head title="Home" />
       <div className="hero">
         <h1 className="title">Welcome to the Next.js Classic Slot Machine</h1>
-        <p className="description">To get started, click the "spin" button.</p>
+        <p className="description">To get started, click the "spin" button.
+          {spinResult &&
+            <span>Three in a row: {JSON.stringify(threeInARow)}</span>
+          }
+        </p>
         <div className="row">
           <div className="card" style={spinResult[0] && { backgroundPositionY: getSpriteOffset(spinResult[0]) }}>
           </div>
@@ -48,11 +52,6 @@ export default () => {
           </div>
           <button onClick={spin} disabled={spinButtonDisabled}>Spin</button>
         </div>
-        {spinResult &&
-          <div className="row">
-            <p>Three in a row: {JSON.stringify(threeInARow)}</p>
-          </div>
-        }
       </div>
   
       <style jsx>{`
