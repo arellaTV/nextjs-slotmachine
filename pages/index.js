@@ -82,8 +82,7 @@ export default () => {
           background-repeat: repeat-y;
           background-position-x: center;
           background-position-y: 0px;
-          background-size: 50%;
-          height: 330px;
+          height: 375px;
           width: 220px;
           border: 1px solid #9B9B9B;
         }
