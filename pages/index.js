@@ -88,12 +88,15 @@ export default () => {
           transition: background-position-y 1000ms ease-in-out;
         }
         .card:nth-of-type(1) {
+          background-position-y: 0px;
           transition-delay: 0ms;
         }
         .card:nth-of-type(2) {
+          background-position-y: -500px;
           transition-delay: 1000ms;
         }
         .card:nth-of-type(3) {
+          background-position-y: -125px;
           transition-delay: 2000ms;
         }
       `}</style>
