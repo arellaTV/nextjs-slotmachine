@@ -85,6 +85,16 @@ export default () => {
           height: 375px;
           width: 220px;
           border: 1px solid #9B9B9B;
+          transition: background-position-y 1000ms ease-in-out;
+        }
+        .card:nth-of-type(1) {
+          transition-delay: 0ms;
+        }
+        .card:nth-of-type(2) {
+          transition-delay: 1000ms;
+        }
+        .card:nth-of-type(3) {
+          transition-delay: 2000ms;
         }
         .card:hover {
           border-color: #067df7;
