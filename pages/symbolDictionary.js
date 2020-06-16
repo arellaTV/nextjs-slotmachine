@@ -10,42 +10,41 @@ export default {
   },
   "D": {
     offset: "-375px",
-
   },
   "E": {
     offset: "-500px",
   },
   "F": {
-    offset: "-725px",
+    offset: "-625px",
   },
   "G": {
-    offset: "-850px",
+    offset: "-750px",
   },
   "H": {
-    offset: "-975px",
+    offset: "-875px",
   },
   "I": {
-    offset: "-1100px",
+    offset: "-1000px",
   },
   "J": {
-    offset: "-1225px",
+    offset: "-1125px",
   },
   "K": {
-    offset: "-1350px",
+    offset: "-1250px",
   },
   "L": {
-    offset: "-1475px",
+    offset: "-1375px",
   },
   "M": {
-    offset: "-1600px",
+    offset: "-1500px",
   },
   "N": {
-    offset: "-1725px",
+    offset: "-1625px",
   },
   "O": {
-    offset: "-1850px",
+    offset: "-1750px",
   },
   "P": {
-    offset: "-1975px",
+    offset: "-1875px",
   }
 }
