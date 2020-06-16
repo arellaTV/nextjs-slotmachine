@@ -33,19 +33,24 @@ export default () => {
         <h1 className="title">Welcome to the Next.js Classic Slot Machine</h1>
         <p className="description">To get started, click the "spin" button.</p>
         <div className="row">
-            <a className="card">
-              <h2>{spinResult[0] || "First Letter"}</h2>
-            </a>
-            <a className="card">
-              <h2>{spinResult[1] || "Second Letter"}</h2>
-            </a>
-            <a className="card">
-              <h2>{spinResult[2] || "Third Letter"}</h2>
-            </a>
-            <a className="card">
-              <button onClick={spin}>Spin</button>
-            </a>
+          <a className="card">
+            <h2>{spinResult[0] || "First Letter"}</h2>
+          </a>
+          <a className="card">
+            <h2>{spinResult[1] || "Second Letter"}</h2>
+          </a>
+          <a className="card">
+            <h2>{spinResult[2] || "Third Letter"}</h2>
+          </a>
+          <a className="card">
+            <button onClick={spin}>Spin</button>
+          </a>
+        </div>
+        {spinResult &&
+          <div className="row">
+            <p>Three in a row: {JSON.stringify(threeInARow)}</p>
           </div>
+        }
       </div>
   
       <style jsx>{`
