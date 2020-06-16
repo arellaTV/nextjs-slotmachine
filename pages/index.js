@@ -34,13 +34,13 @@ export default () => {
         <p className="description">To get started, click the "spin" button.</p>
         <div className="row">
             <a className="card">
-              <h2>{"First Letter"}</h2>
+              <h2>{spinResult[0] || "First Letter"}</h2>
             </a>
             <a className="card">
-              <h2>{"Second Letter"}</h2>
+              <h2>{spinResult[1] || "Second Letter"}</h2>
             </a>
             <a className="card">
-              <h2>{"Third Letter"}</h2>
+              <h2>{spinResult[2] || "Third Letter"}</h2>
             </a>
             <a className="card">
               <button onClick={spin}>Spin</button>
