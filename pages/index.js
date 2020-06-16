@@ -97,20 +97,6 @@ export default () => {
         .card:nth-of-type(3) {
           transition-delay: 2000ms;
         }
-        .card:hover {
-          border-color: #067df7;
-        }
-        .card h3 {
-          margin: 0;
-          color: #067df7;
-          font-size: 18px;
-        }
-        .card p {
-          margin: 0;
-          padding: 12px 0 0;
-          font-size: 13px;
-          color: #333;
-        }
       `}</style>
     </div>
   );
