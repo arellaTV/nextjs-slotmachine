@@ -30,7 +30,6 @@ export default () => {
   }
 
   function getSpriteOffset(letter) {
-    console.log(symbolDictionary[letter]);
     return symbolDictionary[letter].offset;
   }
 
