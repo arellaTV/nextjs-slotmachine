@@ -1,28 +1,25 @@
-import Link from 'next/link';
 import Head from '../components/head';
-import Nav from '../components/nav';
 
 export default () => (
   <div>
     <Head title="Home" />
-    <Nav />
     <div className="hero">
-      <h1 className="title">Welcome to create-next-app-cli (Create Next.js App building tools)</h1>
-      <p className="description">To get started, edit <code>pages/index.js</code> and save to reload.</p>
+      <h1 className="title">Welcome to the Next.js Classic Slot Machine</h1>
+      <p className="description">To get started, click the "spin" button.</p>
       <div className="row">
-        <Link href="/docs">
           <a className="card">
-            <h3>Getting Started &rarr;</h3>
-            <p>Learn more about Next.js on official website</p>
+            <h2>First Letter</h2>
           </a>
-        </Link>
-        <Link href="/create-next-app-cli">
           <a className="card">
-            <h3>Create Next App CLI &rarr;</h3>
-            <p>Was this tools helpful?</p>
+            <h2>Second Letter</h2>
           </a>
-        </Link>
-      </div>
+          <a className="card">
+            <h2>Third Letter</h2>
+          </a>
+          <a className="card">
+            <h2>Spin</h2>
+          </a>
+        </div>
     </div>
 
     <style jsx>{`
